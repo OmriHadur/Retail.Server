@@ -4,6 +4,9 @@ using Retail.Standard.Shared.Resources;
 using Retail.Common;
 using Unity;
 using System.Collections.Generic;
+using Core.Server.Common;
+using Core.Server.Application;
+using Core.Server.Common.Entities;
 
 namespace Retail.Application.Application
 {
@@ -12,7 +15,7 @@ namespace Retail.Application.Application
     {
         protected override ICollection<AddressEntity> GetEntities(UserEntity parent)
         {
-            return parent.Adresses;
+            return null;// parent.Adresses;
         }
     }
 }

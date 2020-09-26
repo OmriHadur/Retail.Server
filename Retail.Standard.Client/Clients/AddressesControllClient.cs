@@ -1,3 +1,4 @@
+using Core.Server.Client.Clients;
 using Retail.Standard.Client.Interfaces;
 using Retail.Standard.Shared.Resources;
 

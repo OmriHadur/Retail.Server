@@ -1,14 +1,17 @@
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using Unity;
+
+using Core.Server.Common;
+using Core.Server.Application;
+
 using Retail.Common.Applications;
 using Retail.Common.Entities;
-using Retail.Common;
-using Unity;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Retail.Common.Repositories;
-using System.Collections.Generic;
-using Retail.Common.Enums;
 using Retail.Standard.Shared.Resources.Order;
 using Retail.Common.Entities.Helpers;
+using Retail.Common.Repositories;
+using Retail.Common.Enums;
 
 namespace Retail.Application.Application
 {
@@ -42,7 +45,7 @@ namespace Retail.Application.Application
             orderEntityResult.Value.Id = orderId;
             await Repository.Update(orderEntityResult.Value);
             await UpdateDeliveryWindow(createResource, orderEntity);
-            return Map(orderEntityResult.Value);
+            return await Map(orderEntityResult.Value);
         }
 
         public async override Task<ActionResult<OrderResource>> Create(OrderCreateResource createResource)
@@ -50,9 +53,10 @@ namespace Retail.Application.Application
             var orderEntityResult = await OrderEntityFactory.CreateOrderEntity(createResource, CurrentUser.Id);
             if (orderEntityResult.Value == null)
                 return orderEntityResult.Result;
-            var orderEntity = await AddEntityToDb(orderEntityResult.Value);
+            var orderEntity = orderEntityResult.Value;
+            await AddEntity(orderEntity);
             await AddOrderToDeliveryWindow(createResource, orderEntity);
-            return Map(orderEntity);
+            return await Map(orderEntity);
         }
 
         public async Task<ActionResult<OrderResource>> SetStatus(string orderId, eOrderStatus status)
@@ -62,7 +66,7 @@ namespace Retail.Application.Application
                 return NotFound(orderId);
             orderEntity.Status = status;
             await Repository.Update(orderEntity);
-            return Map(orderEntity);
+            return await Map(orderEntity);
         }
         private async Task AddOrderToDeliveryWindow(OrderCreateResource createResource, OrderEntity orderEntity)
         {

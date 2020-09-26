@@ -1,14 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Retail.Application.Application;
-using Retail.Common;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Unity;
+using System.Linq;
+
+using Core.Server.Common;
+using Core.Server.Application;
 using Retail.Common.Entities;
+using Core.Server.Common.Repositories;
 using Retail.Common.Entities.Helpers;
 using Retail.Common.Repositories;
 using Retail.Standard.Shared.Resources.Order;
 using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Unity;
+using Core.Server.Common.Entities;
 
 namespace Retail.Application.Helpers
 {
@@ -48,7 +51,8 @@ namespace Retail.Application.Helpers
             creatingEntities.User = await usersRepository.Get(userId);
             if (creatingEntities.User == null)
                 return new UnauthorizedResult();
-            creatingEntities.Address = creatingEntities.User.Adresses.FirstOrDefault(ad => ad.Id == createResource.AddressId);
+            //TODO
+            //creatingEntities.Address = creatingEntities.User.Adresses.FirstOrDefault(ad => ad.Id == createResource.AddressId);
             if (creatingEntities.Address == null)
                 return NotFound(createResource.AddressId);
             creatingEntities.Cart = await cartsRepository.Get(createResource.CartId);

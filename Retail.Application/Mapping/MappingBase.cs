@@ -1,20 +1,24 @@
 ﻿using AutoMapper;
-using Retail.Common.Entities;
-using Retail.Standard.Shared.Resources;
+using Core.Server.Common.Entities;
+using Core.Server.Common.Mapping;
+using Core.Server.Shared.Resources;
 using System;
 
 namespace Retail.Application.Mapping
 {
-    public class MappingBase : Profile
+    public abstract class MappingBase : IResourceMapper
     {
-        public void AddMapping<TCreateResource, TResource, TEntity>()
+        public abstract void AddMapping(Profile profile);
+
+        public void AddMapping<TCreateResource, TResource, TEntity>(Profile profile)
             where TCreateResource : CreateResource
             where TResource : Resource
             where TEntity : Entity, new()
         {
-            CreateMap<TCreateResource, TEntity>();
-            CreateMap<TResource, TEntity>().ReverseMap();
+            profile.CreateMap<TCreateResource, TEntity>();
+            profile.CreateMap<TResource, TEntity>().ReverseMap();
         }
+
         public string SizeDisplay(int size,bool IsInGrams)
         {
             var roundedSize = size < 1000 ? size : Math.Round((decimal)size / 1000, 1);

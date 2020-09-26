@@ -1,9 +1,9 @@
 using Retail.Common.Entities;
 using Retail.Common.Repositories;
-using Retail.Common;
-using System.Collections.Generic;
+using Core.Server.Persistence.Repositories;
+using Core.Server.Common;
 using System.Threading.Tasks;
-using System.Linq;
+using System.Collections.Generic;
 using MongoDB.Driver;
 using Retail.Common.Enums;
 

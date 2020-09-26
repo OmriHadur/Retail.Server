@@ -1,10 +1,13 @@
-﻿using Retail.Common.Entities;
-using Retail.Common.Applications;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Retail.Common;
-using Retail.Standard.Shared.Resources;
 using Unity;
+
+using Core.Server.Common;
+using Core.Server.Application;
+
+using Retail.Common.Applications;
+using Retail.Common.Entities;
+using Retail.Standard.Shared.Resources;
 using Retail.Common.Repositories;
 
 namespace Retail.Application.Application

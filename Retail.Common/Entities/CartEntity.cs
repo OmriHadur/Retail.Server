@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Core.Server.Common.Entities;
 
 namespace Retail.Common.Entities
 {

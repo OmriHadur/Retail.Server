@@ -4,8 +4,8 @@ using Retail.Common.Helpers;
 using Retail.Common.Repositories;
 using System.Threading.Tasks;
 using Unity;
-using Retail.Common;
 using System;
+using Core.Server.Common;
 
 namespace Retail.Application.Helper
 {

@@ -1,16 +1,19 @@
-﻿using Retail.Common.Applications;
-using Retail.Common.Entities;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Collections.Generic;
-using Retail.Common.Repositories;
-using Retail.Standard.Shared.Resources.Cart;
-using Retail.Common;
-using Retail.Standard.Shared.Errors;
+using Microsoft.AspNetCore.Mvc;
 using Unity;
+
+using Core.Server.Common;
+using Core.Server.Application;
+using Core.Server.Shared.Errors;
+
+using Retail.Common.Repositories;
+using Retail.Common.Applications;
+using Retail.Common.Entities;
+using Retail.Common.Helpers;
+using Retail.Standard.Shared.Resources.Cart;
 using System.Linq;
 using System;
-using Retail.Common.Helpers;
 
 namespace Retail.Application.Application
 {
@@ -19,7 +22,7 @@ namespace Retail.Application.Application
     {
         public async Task<ActionResult<CartResource>> GetMyCart()
         {
-            return Map(await GetByUserId());
+            return await Map(await GetByUserId());
         }
 
         public async override Task<ActionResult<CartResource>> Create(CartCreateResource createResource)
@@ -36,7 +39,7 @@ namespace Retail.Application.Application
             if (cart == null)
                 return await base.Create(createResource);
             else
-                return Map(cart);
+                return await Map(cart);
         }
         protected override CartEntity GetNewTEntity(CartCreateResource resource)
         {
@@ -62,7 +65,7 @@ namespace Retail.Application.Application
                 return BadRequest(BadRequestReason.SameExists);
             cart.CustomerId = CurrentUser.Id;
             await Repository.Update(cart);
-            return Map(cart);
+            return await Map(cart);
         }
 
         public async Task<ActionResult<CartResource>> AddOrder(string cartId, string orderId)
@@ -76,7 +79,7 @@ namespace Retail.Application.Application
 
             await AddCartItems(cart, order);
             await Repository.Update(cart);
-            return Map(cart);
+            return await Map(cart);
         }
 
         private async Task AddCartItems(CartEntity cart, OrderEntity order)

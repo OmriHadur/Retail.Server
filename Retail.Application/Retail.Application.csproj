@@ -15,14 +15,27 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.5.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
-    <PackageReference Include="Unity" Version="5.11.5" />
+    <PackageReference Include="Unity" Version="5.11.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Retail.Common\Retail.Common.csproj" />
+    <ProjectReference Include="..\Retail.Standard.Shared\Retail.Standard.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Core.Server.Application">
+      <HintPath>..\..\Core.Server\Output\Server\netcoreapp3.1\Core.Server.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Server.Common">
+      <HintPath>..\..\Core.Server\Output\Server\netcoreapp3.1\Core.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Server.Shared">
+      <HintPath>..\..\Core.Server\Output\Server\netcoreapp3.1\Core.Server.Shared.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

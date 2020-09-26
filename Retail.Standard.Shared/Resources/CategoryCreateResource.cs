@@ -1,4 +1,4 @@
-﻿
+﻿using Core.Server.Shared.Resources;
 using System.ComponentModel.DataAnnotations;
 
 namespace Retail.Standard.Shared.Resources

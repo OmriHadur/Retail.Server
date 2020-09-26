@@ -1,5 +1,6 @@
 using Retail.Standard.Shared.Resources.Cart;
 using System;
+using Core.Server.Shared.Resources;
 
 namespace Retail.Standard.Shared.Resources.Order
 {

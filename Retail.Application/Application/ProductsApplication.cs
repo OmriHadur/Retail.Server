@@ -1,14 +1,17 @@
-﻿using Retail.Common.Applications;
-using Retail.Common.Entities;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using Retail.Common.Repositories;
-using Unity;
-using Retail.Common;
-using Retail.Standard.Shared.Resources;
-using Retail.Standard.Shared.Errors;
+﻿using System.Threading.Tasks;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using Unity;
 using System.Linq;
+
+using Core.Server.Common;
+using Core.Server.Application;
+
+using Retail.Common.Applications;
+using Retail.Common.Entities;
+using Retail.Standard.Shared.Resources;
+using Retail.Common.Repositories;
+using Core.Server.Shared.Errors;
 
 namespace Retail.Application.Application
 {
@@ -23,17 +26,14 @@ namespace Retail.Application.Application
             return await base.Create(resource);
         }
 
-        protected override async Task<ActionResult> UpdateEntity(ProductCreateResource createResource, ProductEntity entity)
+        protected override async Task<ActionResult> Validate(ProductCreateResource createResource)
         {
-            var DepartmentEntity = await GetEntity<DepartmentEntity>(createResource.DepartmentId);
-            if (DepartmentEntity == null)
+            var departmentEntity = await GetEntity<DepartmentEntity>(createResource.DepartmentId);
+            if (departmentEntity == null)
                 return NotFound(createResource.DepartmentId);
-            var hasCategoryid = DepartmentEntity.CategoriesByFamily.Values.Any(c => c.Any(cc => cc.Id == createResource.CategoryId));
+            var hasCategoryid = departmentEntity.HasCategory(createResource.CategoryId);
             if (!hasCategoryid)
                 return NotFound(createResource.CategoryId);
-
-            entity.CategoryId = createResource.CategoryId;
-            entity.DepartmentName = DepartmentEntity.Name;
             return Ok();
         }
 

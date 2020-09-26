@@ -1,14 +1,18 @@
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using Unity;
+using System.Linq;
+
+using Core.Server.Common;
+using Core.Server.Application;
+
 using Retail.Common.Applications;
 using Retail.Common.Entities;
 using Retail.Standard.Shared.Resources.Order;
-using Retail.Common;
-using Unity;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Retail.Standard.Shared.Errors;
+using Core.Server.Shared.Errors;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using Retail.Standard.Shared.Errors;
 
 namespace Retail.Application.Application
 {
@@ -19,7 +23,7 @@ namespace Retail.Application.Application
     {
         public async Task<ActionResult<Dictionary<string, DeliveryWindowResource>>> GetSorted()
         {
-            var deliveryWindows = await Repository.GetAll();
+            var deliveryWindows = await Repository.Get();
             var deliveryWindowsGroupBy = deliveryWindows.GroupBy(dw => dw.Date).OrderBy(dw => dw.Key);
             var deliveryWindowsOrdered = deliveryWindowsGroupBy.ToDictionary(dw => dw.Key.ToShortDateString(), dw => GetSortedAndMappedWindows(dw));
             return Ok(deliveryWindowsOrdered);
@@ -28,8 +32,8 @@ namespace Retail.Application.Application
         public async override Task<ActionResult<DeliveryWindowResource>> Create(DeliveryWindowCreateResource createResource)
         {
             if (createResource.FromHour >= createResource.ToHour)
-                return BadRequest(BadRequestReason.InvalidToHour);
-            var deliveryWindows = await Repository.GetAll();
+                return BadRequest(BadRequestReasonExtended.InvalidToHour);
+            var deliveryWindows = await Repository.Get();
             foreach (var deliveryWindow in deliveryWindows)
                 if (AreCorelated(createResource, deliveryWindow))
                     return BadRequest(BadRequestReason.SameExists);

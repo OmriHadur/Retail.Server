@@ -1,38 +1,33 @@
 ﻿using AutoMapper;
+using Core.Server.Common;
 using Retail.Common.Entities;
 using Retail.Standard.Shared.Resources;
-using Retail.Standard.Shared.Resources.Users;
 using System;
 using System.Linq;
 
 namespace Retail.Application.Mapping
 {
+    [InjectMany]
     public class AutoMapperProfile : MappingBase
     {
-        public AutoMapperProfile()
+        public override void AddMapping(Profile profile)
         {
-            new CartResourcesMappiing().AddMapping(this);
-            new OrderResourcesMappiing().AddMapping(this);
+            AddMapping<ProductCreateResource, ProductResource, ProductEntity>(profile);
+            AddMapping<PromotionCreateResource, PromotionResource, PromotionEntity>(profile);
 
-            AddMapping<WeatherForecastCreateResource, WeatherForecastResource, WeatherForecastEntity>();
-            AddMapping<ProductCreateResource, ProductResource, ProductEntity>();
-            AddMapping<PromotionCreateResource, PromotionResource, PromotionEntity>();
-
-            CreateMap<ProductCreateResource, ProductEntity>()
+            profile.CreateMap<ProductCreateResource, ProductEntity>()
                 .ForMember(d => d.Price, opt => opt.MapFrom(s => Math.Round(s.Price, 2)))
                 .ForMember(d => d.SizeDisplay, opt => opt.MapFrom(s => SizeDisplay(s.Size,s.IsInGrams)));
 
-            AddMapping<UserCreateResource, UserResource, UserEntity>();
-            AddMapping<LoginCreateResource, LoginResource, LoginEntity>();
-            AddMapping<AddressCreateResource, AddressResource, AddressEntity>();
+            AddMapping<AddressCreateResource, AddressResource, AddressEntity>(profile);
 
-            AddMapping<DepartmentCreateResource, DepartmentResource, DepartmentEntity>();
-            CreateMap<DepartmentEntity, DepartmentResource>()
+            AddMapping<DepartmentCreateResource, DepartmentResource, DepartmentEntity>(profile);
+            profile.CreateMap<DepartmentEntity, DepartmentResource>()
                 .ForMember(te => te.Families, opt => DepartmentFamilies(opt));
 
-            CreateMap<CategoryEntity, CategoryResource>();
-            CreateMap<DepartmentCreateResource, CategoryEntity>();
-            CreateMap<CategoryCreateResource, CategoryEntity>();
+            profile.CreateMap<CategoryEntity, CategoryResource>();
+            profile.CreateMap<DepartmentCreateResource, CategoryEntity>();
+            profile.CreateMap<CategoryCreateResource, CategoryEntity>();
         }
 
         private void DepartmentFamilies(IMemberConfigurationExpression<DepartmentEntity, DepartmentResource, CategoryFamily[]> opt)

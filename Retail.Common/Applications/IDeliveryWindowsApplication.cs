@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Retail.Standard.Shared.Resources.Order;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Core.Server.Common.Applications;
 
 namespace Retail.Common.Applications
 {

@@ -1,9 +1,7 @@
 using Retail.Common.Entities;
 using Retail.Common.Repositories;
-using Retail.Common;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Linq;
+using Core.Server.Persistence.Repositories;
+using Core.Server.Common;
 
 namespace Retail.Persistence.Repositories
 {

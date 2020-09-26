@@ -1,5 +1,6 @@
-﻿using Retail.Standard.Client.Interfaces;
-using Retail.Standard.Client.Results;
+﻿using Core.Server.Client.Clients;
+using Core.Server.Client.Results;
+using Retail.Standard.Client.Interfaces;
 using Retail.Standard.Shared.Resources.Cart;
 using System.Threading.Tasks;
 

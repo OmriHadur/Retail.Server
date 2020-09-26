@@ -1,4 +1,4 @@
-﻿
+﻿using Core.Server.Shared.Resources;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 

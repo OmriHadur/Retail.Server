@@ -1,6 +1,7 @@
 using Retail.Common.Enums;
 using System;
 using System.ComponentModel.DataAnnotations;
+using Core.Server.Common.Entities;
 
 namespace Retail.Common.Entities
 {

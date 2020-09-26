@@ -1,3 +1,4 @@
+using Core.Server.Common.Entities;
 using System.ComponentModel.DataAnnotations;
 
 namespace Retail.Common.Entities

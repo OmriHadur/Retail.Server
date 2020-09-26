@@ -1,14 +1,17 @@
-﻿using Retail.Common.Applications;
-using Retail.Common.Entities;
-using System.Threading.Tasks;
-using Unity;
-using Retail.Common.Repositories;
+﻿using System.Threading.Tasks;
 using System.Collections.Generic;
-using Retail.Common.Helpers;
-using Retail.Common;
-using Retail.Standard.Shared.Resources.Cart;
 using Microsoft.AspNetCore.Mvc;
-using Retail.Standard.Shared.Errors;
+using Unity;
+
+using Core.Server.Common;
+using Core.Server.Application;
+using Core.Server.Shared.Errors;
+
+using Retail.Common.Repositories;
+using Retail.Common.Applications;
+using Retail.Common.Entities;
+using Retail.Common.Helpers;
+using Retail.Standard.Shared.Resources.Cart;
 
 namespace Retail.Application.Application
 {

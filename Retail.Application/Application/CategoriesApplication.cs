@@ -1,12 +1,16 @@
-﻿using Retail.Common.Applications;
-using Retail.Common.Entities;
-using Retail.Common;
-using Retail.Standard.Shared.Resources;
+﻿using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using MongoDB.Bson;
+using Unity;
 using System.Linq;
+
+using Core.Server.Common;
+using Core.Server.Application;
+
+using Retail.Common.Applications;
+using Retail.Common.Entities;
+using Retail.Standard.Shared.Resources;
+using MongoDB.Bson;
 
 namespace Retail.Application.Application
 {

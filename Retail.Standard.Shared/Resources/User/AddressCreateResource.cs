@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
+using Core.Server.Shared.Resources;
 
 namespace Retail.Standard.Shared.Resources
 {

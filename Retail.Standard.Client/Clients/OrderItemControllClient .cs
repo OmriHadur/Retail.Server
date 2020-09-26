@@ -1,5 +1,5 @@
-﻿using Retail.Standard.Client.Interfaces;
-using Retail.Standard.Shared.Resources.Cart;
+﻿using Core.Server.Client.Clients;
+using Retail.Standard.Client.Interfaces;
 using Retail.Standard.Shared.Resources.Order;
 
 namespace Retail.Standard.Client.Clients

@@ -1,4 +1,4 @@
-﻿
+﻿using Core.Server.Shared.Resources;
 using System.Collections.Generic;
 
 namespace Retail.Standard.Shared.Resources

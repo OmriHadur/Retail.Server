@@ -1,9 +1,12 @@
+using System.Collections.Generic;
+using Unity;
+
+using Core.Server.Common;
+using Core.Server.Application;
+
 using Retail.Common.Applications;
 using Retail.Common.Entities;
 using Retail.Standard.Shared.Resources.Order;
-using Retail.Common;
-using Unity;
-using System.Collections.Generic;
 
 namespace Retail.Application.Application
 {

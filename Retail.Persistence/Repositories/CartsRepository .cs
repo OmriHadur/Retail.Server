@@ -2,8 +2,8 @@
 using Retail.Common.Entities;
 using Retail.Common.Repositories;
 using MongoDB.Driver;
-using System.Collections.Generic;
-using Retail.Common;
+using Core.Server.Persistence.Repositories;
+using Core.Server.Common;
 
 namespace Retail.Persistence.Repositories
 {

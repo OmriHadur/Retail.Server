@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +17,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Retail.Standard.Shared\Retail.Standard.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Core.Server.Client">
+      <HintPath>..\..\Core.Server\Output\Server\netcoreapp3.1\Core.Server.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Server.Shared">
+      <HintPath>..\..\Core.Server\Output\Server\netcoreapp3.1\Core.Server.Shared.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

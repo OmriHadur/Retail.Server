@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Core.Server.Shared.Resources;
 
 namespace Retail.Standard.Shared.Resources.Cart
 {

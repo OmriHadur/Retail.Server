@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Core.Server.Shared.Resources;
 
 namespace Retail.Standard.Shared.Resources
 {

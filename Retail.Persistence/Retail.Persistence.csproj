@@ -20,4 +20,13 @@
     <ProjectReference Include="..\Retail.Common\Retail.Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Core.Server.Common">
+      <HintPath>..\..\Core.Server\Output\Server\netcoreapp3.1\Core.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Server.Persistence">
+      <HintPath>..\..\Core.Server\Output\Server\netcoreapp3.1\Core.Server.Persistence.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

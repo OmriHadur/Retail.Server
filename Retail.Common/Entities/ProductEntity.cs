@@ -1,5 +1,6 @@
 ﻿using Retail.Standard.Shared;
 using System.ComponentModel.DataAnnotations;
+using Core.Server.Common.Entities;
 
 namespace Retail.Common.Entities
 {

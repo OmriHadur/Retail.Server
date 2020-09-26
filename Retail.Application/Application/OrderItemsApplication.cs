@@ -1,14 +1,18 @@
-﻿using Retail.Common.Applications;
-using Retail.Common.Entities;
-using System.Threading.Tasks;
-using Unity;
-using Retail.Common.Repositories;
+﻿using System.Threading.Tasks;
 using System.Collections.Generic;
-using Retail.Common.Helpers;
-using Retail.Common;
 using Microsoft.AspNetCore.Mvc;
-using Retail.Standard.Shared.Errors;
+using Unity;
+
+using Core.Server.Common;
+using Core.Server.Application;
+
+using Retail.Common.Applications;
+using Retail.Common.Entities;
 using Retail.Standard.Shared.Resources.Order;
+using Retail.Common.Repositories;
+using Retail.Common.Helpers;
+using Core.Server.Shared.Errors;
+using Retail.Standard.Shared.Errors;
 
 namespace Retail.Application.Application
 {
@@ -29,7 +33,7 @@ namespace Retail.Application.Application
         protected async override Task<ActionResult<CartItemEntity>> AddToParent(OrderEntity order, OrderItemCreateResource resource)
         {
             if (order.Status != Common.Enums.eOrderStatus.Pending)
-                return BadRequest(BadRequestReason.OrderNotPending);
+                return BadRequest(BadRequestReasonExtended.OrderNotPending);
             var productEntity = await ProductsRepository.Get(resource.ProductId);
             if (productEntity == null)
                 return NotFound(resource.ProductId);
@@ -49,7 +53,7 @@ namespace Retail.Application.Application
             if (order == null) return NotFound(parentId);
 
             if (order.Status != Common.Enums.eOrderStatus.Pending)
-                return BadRequest(BadRequestReason.OrderNotPending);
+                return BadRequest(BadRequestReasonExtended.OrderNotPending);
             return await UpdateCartItemEntity(id, resource, order);
         }
 

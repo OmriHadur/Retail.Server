@@ -1,5 +1,6 @@
+using Core.Server.Client.Clients;
+using Core.Server.Client.Results;
 using Retail.Standard.Client.Interfaces;
-using Retail.Standard.Client.Results;
 using Retail.Standard.Shared.Resources.Order;
 using System.Collections.Generic;
 using System.Threading.Tasks;

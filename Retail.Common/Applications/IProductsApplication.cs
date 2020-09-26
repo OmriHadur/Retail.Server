@@ -1,4 +1,4 @@
-﻿
+﻿using Core.Server.Common.Applications;
 using Microsoft.AspNetCore.Mvc;
 using Retail.Standard.Shared.Resources;
 using System.Collections.Generic;
