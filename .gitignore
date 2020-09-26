@@ -1,0 +1,18 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Retail.Application/bin
+/Retail.Application/obj
+/Retail.Common/bin
+/Retail.Common/obj
+/Retail.Persistence/bin
+/Retail.Persistence/obj
+/Retail.Standard.Client/bin
+/Retail.ResourceCreator/obj
+/Retail.Standard.Client/obj
+/Retail.Standard.Shared/bin
+/Retail.Standard.Shared/obj
+/Retail.Web/bin/Release/netcoreapp3.1
+/Retail.Web/obj

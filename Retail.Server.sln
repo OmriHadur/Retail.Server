@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Web", "Retail.Web\Retail.Web.csproj", "{03372C20-DA0E-466C-8299-5EC8FA41AA71}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Application", "Retail.Application\Retail.Application.csproj", "{13EBE1D2-2079-42CD-A8CA-058A3F018A76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Common", "Retail.Common\Retail.Common.csproj", "{27D12351-8D10-4148-B61E-51DFA8A3960C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Persistence", "Retail.Persistence\Retail.Persistence.csproj", "{677CD389-B7D9-48C1-8B7E-B7A78F5CBCC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Standard.Shared", "Retail.Standard.Shared\Retail.Standard.Shared.csproj", "{9BBEFA6E-F657-4C86-8F39-1AFFBC02DEF6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Standard.Client", "Retail.Standard.Client\Retail.Standard.Client.csproj", "{28569F5E-2FA1-4A10-B989-89368142B3F6}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "../docker-compose.dcproj", "{16E8C876-D579-4B3E-95DA-E49AFB2C3ED5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03372C20-DA0E-466C-8299-5EC8FA41AA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03372C20-DA0E-466C-8299-5EC8FA41AA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03372C20-DA0E-466C-8299-5EC8FA41AA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03372C20-DA0E-466C-8299-5EC8FA41AA71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13EBE1D2-2079-42CD-A8CA-058A3F018A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13EBE1D2-2079-42CD-A8CA-058A3F018A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13EBE1D2-2079-42CD-A8CA-058A3F018A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13EBE1D2-2079-42CD-A8CA-058A3F018A76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D12351-8D10-4148-B61E-51DFA8A3960C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D12351-8D10-4148-B61E-51DFA8A3960C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D12351-8D10-4148-B61E-51DFA8A3960C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D12351-8D10-4148-B61E-51DFA8A3960C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{677CD389-B7D9-48C1-8B7E-B7A78F5CBCC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{677CD389-B7D9-48C1-8B7E-B7A78F5CBCC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{677CD389-B7D9-48C1-8B7E-B7A78F5CBCC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{677CD389-B7D9-48C1-8B7E-B7A78F5CBCC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BBEFA6E-F657-4C86-8F39-1AFFBC02DEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BBEFA6E-F657-4C86-8F39-1AFFBC02DEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BBEFA6E-F657-4C86-8F39-1AFFBC02DEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BBEFA6E-F657-4C86-8F39-1AFFBC02DEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28569F5E-2FA1-4A10-B989-89368142B3F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28569F5E-2FA1-4A10-B989-89368142B3F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28569F5E-2FA1-4A10-B989-89368142B3F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28569F5E-2FA1-4A10-B989-89368142B3F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16E8C876-D579-4B3E-95DA-E49AFB2C3ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16E8C876-D579-4B3E-95DA-E49AFB2C3ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16E8C876-D579-4B3E-95DA-E49AFB2C3ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16E8C876-D579-4B3E-95DA-E49AFB2C3ED5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5004D6C-C05B-4002-AEBD-1280CD052471}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://omrihadur.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Retail.Web\\Retail.Web.csproj
+		SccProjectName1 = Retail.Web
+		SccLocalPath1 = Retail.Web
+		SccProjectUniqueName2 = Retail.Application\\Retail.Application.csproj
+		SccProjectName2 = Retail.Application
+		SccLocalPath2 = Retail.Application
+		SccProjectUniqueName3 = Retail.Common\\Retail.Common.csproj
+		SccProjectName3 = Retail.Common
+		SccLocalPath3 = Retail.Common
+		SccProjectUniqueName4 = Retail.Persistence\\Retail.Persistence.csproj
+		SccProjectName4 = Retail.Persistence
+		SccLocalPath4 = Retail.Persistence
+		SccProjectUniqueName5 = Retail.Standard.Shared\\Retail.Standard.Shared.csproj
+		SccProjectName5 = Retail.Standard.Shared
+		SccLocalPath5 = Retail.Standard.Shared
+		SccProjectUniqueName6 = Retail.Standard.Client\\Retail.Standard.Client.csproj
+		SccProjectName6 = Retail.Standard.Client
+		SccLocalPath6 = Retail.Standard.Client
+	EndGlobalSection
+EndGlobal
