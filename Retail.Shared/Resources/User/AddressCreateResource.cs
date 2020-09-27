@@ -7,8 +7,12 @@ namespace Retail.Shared.Resources
     public class AddressCreateResource : CreateResource
     {
         [Required]
+        public string UserId { get; set; }
+
+        [Required]
         [StringLength(20)]
         public string City { get; set; }
+
         [Required]
         [StringLength(50)]
         public string Street { get; set; }

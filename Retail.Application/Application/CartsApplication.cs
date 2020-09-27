@@ -25,12 +25,12 @@ namespace Retail.Application.Application
             return await Map(await GetByUserId());
         }
 
-        public async override Task<ActionResult<CartResource>> Create(CartCreateResource createResource)
+        protected async override Task<ActionResult> Validate(CartCreateResource createResource)
         {
             var prevCart = await GetByUserId();
             if (prevCart != null)
                 return BadRequest(BadRequestReason.SameExists);
-            return await base.Create(createResource);
+            return await base.Validate(createResource);
         }
 
         public async Task<ActionResult<CartResource>> GetOrCreate(CartCreateResource createResource)

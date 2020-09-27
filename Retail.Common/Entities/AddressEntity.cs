@@ -6,6 +6,9 @@ namespace Retail.Common.Entities
     public class AddressEntity : Entity
     {
         [Required]
+        public string UserId { get; set; }
+
+        [Required]
         [StringLength(20)]
         public string City { get; set; }
 
