@@ -5,6 +5,7 @@ using Retail.Common.Enums;
 using Retail.Standard.Shared.Resources.Order;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Core.Server.Web.Controllers;
 
 namespace Retail.Web.Controllers
 {

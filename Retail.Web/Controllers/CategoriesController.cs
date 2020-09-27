@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Core.Server.Web.Controllers;
+using Microsoft.AspNetCore.Mvc;
 using Retail.Standard.Shared.Resources;
 
 namespace Retail.Web.Controllers

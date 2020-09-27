@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Retail.Standard.Shared.Resources.Cart;
 using Retail.Standard.Shared.Resources.Order;
+using Core.Server.Web.Controllers;
 
 namespace Retail.Web.Controllers
 {
