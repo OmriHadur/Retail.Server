@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Retail.Web
 {
-    public class Startup : RestApiStartup
+    public class Startup : CoreServerStartup
     {
         public Startup(IConfiguration configuration)
            : base(configuration)
