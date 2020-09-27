@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Common", "Retail.Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Persistence", "Retail.Persistence\Retail.Persistence.csproj", "{677CD389-B7D9-48C1-8B7E-B7A78F5CBCC0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Standard.Shared", "Retail.Standard.Shared\Retail.Standard.Shared.csproj", "{9BBEFA6E-F657-4C86-8F39-1AFFBC02DEF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Shared", "Retail.Shared\Retail.Shared.csproj", "{9BBEFA6E-F657-4C86-8F39-1AFFBC02DEF6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Standard.Client", "Retail.Standard.Client\Retail.Standard.Client.csproj", "{28569F5E-2FA1-4A10-B989-89368142B3F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Retail.Client", "Retail.Client\Retail.Client.csproj", "{28569F5E-2FA1-4A10-B989-89368142B3F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

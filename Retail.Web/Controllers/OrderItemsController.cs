@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Retail.Standard.Shared.Resources.Order;
+using Retail.Shared.Resources.Order;
 using Core.Server.Web.Controllers;
 
 namespace Retail.Web.Controllers

@@ -1,6 +1,6 @@
 using Core.Server.Web.Controllers;
 using Microsoft.AspNetCore.Mvc;
-using Retail.Standard.Shared.Resources;
+using Retail.Shared.Resources;
 
 namespace Retail.Web.Controllers
 {

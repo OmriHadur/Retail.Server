@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Retail.Common.Applications;
-using Retail.Standard.Shared.Resources.Cart;
+using Retail.Shared.Resources.Cart;
 using System.Threading.Tasks;
 
 namespace Retail.Web.Controllers

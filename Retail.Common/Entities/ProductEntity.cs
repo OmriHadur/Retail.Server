@@ -1,4 +1,4 @@
-﻿using Retail.Standard.Shared;
+﻿using Retail.Shared;
 using System.ComponentModel.DataAnnotations;
 using Core.Server.Common.Entities;
 

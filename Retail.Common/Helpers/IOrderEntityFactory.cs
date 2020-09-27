@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Retail.Standard.Shared.Resources.Order;
+using Retail.Shared.Resources.Order;
 using System.Threading.Tasks;
 
 namespace Retail.Common.Entities.Helpers

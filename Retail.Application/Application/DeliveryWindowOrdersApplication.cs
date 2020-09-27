@@ -6,7 +6,7 @@ using Core.Server.Application;
 
 using Retail.Common.Applications;
 using Retail.Common.Entities;
-using Retail.Standard.Shared.Resources.Order;
+using Retail.Shared.Resources.Order;
 
 namespace Retail.Application.Application
 {

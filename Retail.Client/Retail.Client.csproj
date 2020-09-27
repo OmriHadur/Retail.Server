@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Retail.Shared\Retail.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Core.Server.Client">
+      <HintPath>..\..\Core.Server\Output\Server\netcoreapp3.1\Core.Server.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Server.Shared">
+      <HintPath>..\..\Core.Server\Output\Server\netcoreapp3.1\Core.Server.Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

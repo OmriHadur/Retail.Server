@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Retail.Common\Retail.Common.csproj" />
-    <ProjectReference Include="..\Retail.Standard.Shared\Retail.Standard.Shared.csproj" />
+    <ProjectReference Include="..\Retail.Shared\Retail.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

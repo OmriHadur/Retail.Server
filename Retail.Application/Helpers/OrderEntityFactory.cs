@@ -9,7 +9,7 @@ using Retail.Common.Entities;
 using Core.Server.Common.Repositories;
 using Retail.Common.Entities.Helpers;
 using Retail.Common.Repositories;
-using Retail.Standard.Shared.Resources.Order;
+using Retail.Shared.Resources.Order;
 using System;
 using Core.Server.Common.Entities;
 

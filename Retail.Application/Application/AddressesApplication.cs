@@ -1,6 +1,6 @@
 using Retail.Common.Applications;
 using Retail.Common.Entities;
-using Retail.Standard.Shared.Resources;
+using Retail.Shared.Resources;
 using Retail.Common;
 using Unity;
 using System.Collections.Generic;

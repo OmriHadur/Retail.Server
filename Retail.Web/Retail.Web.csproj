@@ -12,6 +12,7 @@
     <UserSecretsId>089b5ec9-d7b4-44fd-b060-c8506bdf90c7</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <StartupObject>Retail.Web.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +28,7 @@
     <ProjectReference Include="..\Retail.Application\Retail.Application.csproj" />
     <ProjectReference Include="..\Retail.Common\Retail.Common.csproj" />
     <ProjectReference Include="..\Retail.Persistence\Retail.Persistence.csproj" />
+    <ProjectReference Include="..\Retail.Shared\Retail.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

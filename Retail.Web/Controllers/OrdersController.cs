@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Retail.Common.Applications;
 using Retail.Common.Enums;
-using Retail.Standard.Shared.Resources.Order;
+using Retail.Shared.Resources.Order;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Core.Server.Web.Controllers;

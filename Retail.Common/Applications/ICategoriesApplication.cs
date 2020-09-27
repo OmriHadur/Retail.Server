@@ -1,5 +1,5 @@
 ﻿
-using Retail.Standard.Shared.Resources;
+using Retail.Shared.Resources;
 using Core.Server.Common.Applications;
 
 namespace Retail.Common.Applications

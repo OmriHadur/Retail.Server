@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Core.Server.Common;
 using Retail.Common.Entities;
-using Retail.Standard.Shared.Resources;
+using Retail.Shared.Resources;
 using System;
 using System.Linq;
 

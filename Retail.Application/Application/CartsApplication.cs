@@ -11,7 +11,7 @@ using Retail.Common.Repositories;
 using Retail.Common.Applications;
 using Retail.Common.Entities;
 using Retail.Common.Helpers;
-using Retail.Standard.Shared.Resources.Cart;
+using Retail.Shared.Resources.Cart;
 using System.Linq;
 using System;
 

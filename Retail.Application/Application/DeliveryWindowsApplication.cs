@@ -9,10 +9,10 @@ using Core.Server.Application;
 
 using Retail.Common.Applications;
 using Retail.Common.Entities;
-using Retail.Standard.Shared.Resources.Order;
+using Retail.Shared.Resources.Order;
 using Core.Server.Shared.Errors;
 using System;
-using Retail.Standard.Shared.Errors;
+using Retail.Shared.Errors;
 
 namespace Retail.Application.Application
 {

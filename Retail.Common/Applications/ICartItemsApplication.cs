@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Retail.Standard.Shared.Resources.Cart;
+using Retail.Shared.Resources.Cart;
 using System.Threading.Tasks;
 using Core.Server.Common.Applications;
 

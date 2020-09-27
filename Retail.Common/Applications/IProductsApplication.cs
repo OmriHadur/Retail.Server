@@ -1,6 +1,6 @@
 ﻿using Core.Server.Common.Applications;
 using Microsoft.AspNetCore.Mvc;
-using Retail.Standard.Shared.Resources;
+using Retail.Shared.Resources;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

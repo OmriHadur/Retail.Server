@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Core.Server.Common;
 using Retail.Common.Entities;
-using Retail.Standard.Shared.Resources;
-using Retail.Standard.Shared.Resources.Order;
+using Retail.Shared.Resources;
+using Retail.Shared.Resources.Order;
 using System;
 
 namespace Retail.Application.Mapping
